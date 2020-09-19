@@ -8,27 +8,31 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'Auth',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          SvgPicture.asset(
-            'assets/icons/chat.svg',
-            height: size.height * 0.5,
-          ),
-          RoundButton(
-            text: 'LOGIN',
-            press: () {},
-          ),
-          RoundButton(
-            text: 'LOGIN',
-            color: Colors.lightBlueAccent,
-            press: () {},
-          ),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Auth',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: size.height * 0.03,),
+            SvgPicture.asset(
+              'assets/icons/chat.svg',
+              height: size.height * 0.5,
+            ),
+            SizedBox(height: size.height * 0.03,),
+            RoundButton(
+              text: 'LOGIN',
+              press: () {},
+            ),
+            RoundButton(
+              text: 'LOGIN',
+              color: Colors.lightBlueAccent,
+              press: () {},
+            ),
+          ],
+        ),
       ),
     );
   }
